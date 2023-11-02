@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Squadfree Bootstrap Template - Index</title>
+  <title>Oracle First Approach</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/oracle-logo.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -43,7 +43,7 @@
     <div class="container d-flex align-items-center justify-content-between position-relative">
 
       <div class="logo">
-        <h1 class="text-light"><a href="index.html"><span>ORACLE FIRST APPROACH</span></a></h1>
+        <h1 class="text-light"><a href="index.html"><span>Oracle First Approach</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -549,10 +549,11 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Analysis of your business environment</h2>
+          <p>Give us an idea of your requirements to know what is the perfect option of OCI services in your business environment for you</p>
         </div>
 
+        <!-- 
         <div class="row">
           <div class="col-lg-6">
             <div class="info-box mb-4">
@@ -577,17 +578,168 @@
               <p>+1 5589 55488 55</p>
             </div>
           </div>
+          
 
         </div>
+        -->
 
         <div class="row">
-
+  <!-- 
           <div class="col-lg-6 ">
             <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
           </div>
 
-          <div class="col-lg-6">
+           -->
+
+          <div class="row">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+
+              <div class="row">
+                <div class="col-md-6 form-group">                       
+                  <label for="type">&nbsp &nbsp How many employees do you have?</label>
+                  <select name="container" id="container" required>
+                    <option value="cien doscientos">100 - 200</option>
+                    <option value="doscientos a trescientos">200 - 300</option> 
+                    <option value="trescientos-cuatrocientos">300 - 400</option>
+                  </select>           
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">       
+                  <label for="type">&nbsp &nbsp How many departments do you have?</label>
+                  <select name="container" id="container" required>
+                    <option value="cien doscientos">1-6</option>
+                    <option value="doscientos a trescientos">6-10</option> 
+                    <option value="trescientos-cuatrocientos">+ 10</option>
+                  </select>  
+                </div>
+
+
+                <br>
+              </div>
+
+              <div class="row">
+                <br>
+              </div>
+              <div class="row">                
+                <div class="col-md-6 form-group">       
+                  <label for="type">&nbsp &nbsp How many customers do you have?</label>
+                  <select name="container" id="container" required>
+                    <option value="uno a cinco">1 - 5</option>
+                    <option value="cinco-diez">5 - 10</option> 
+                    <option value="mayourdiez">+ 10</option>
+                  </select>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">                 
+                  <label for="type">&nbsp &nbsp How many servers do you have?</label>
+                  <select name="container" id="container" required>
+                    <option value="uno a cinco">1 - 5</option>
+                    <option value="cinco-diez">5 - 10</option> 
+                    <option value="mayourdiez">+ 10</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <br>
+              </div>
+              <div class="row">                
+                <div class="col-md-6 form-group">
+
+                  <label for="type">&nbsp &nbsp What is your operating system?</label>
+                  <select name="container" id="container" required>
+                    <option value="win32">Windows 32-bit</option>
+                    <option value="win64">Windows 64-bit</option> 
+                    <option value="linux">Linux</option>
+                    <option value="debian">Debian</option>
+                    <option value="Solaris">Solaris</option>
+                    <option value="macOS">macOS</option>
+                  </select>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <label for="type">&nbsp &nbsp How many databases does your company have?</label>
+                  <select name="databases" id="databases" required>
+                    <option value="uno a cinco">1 - 5</option>
+                    <option value="cinco-diez">5 - 10</option> 
+                    <option value="mayourdiez">+ 10</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <br>
+              </div>
+              <div class="row">
+                <br>
+                <div class="col-md-6 form-group">               
+
+                  <label for="type">&nbsp &nbspWhat types of databases does your company have?</label>
+                  <select name="container" id="container" required>
+                    <option value="Centralized database">Centralized db</option>
+                    <option value="Cloud database.">Cloud db.</option> 
+                    <option value="Distributed database.">Distributed db.</option>
+                    <option value="Graph database.">Graph db.</option> 
+                    <option value="NoSQL database.">NoSQL db.</option>
+                    <option value="Object-oriented database.">Object-oriented db.</option>
+                  </select>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Where is your database located?" required>
+                </div>
+              </div>
+              <div class="row">
+                <br>
+              </div>
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="What versions of databases do you have?" required>
+                </div>
+                <div class="col-md-6 form-group">
+                  <label for="type">&nbsp &nbsp Are your databases managed by your company?</label>
+                  <select name="container" id="container">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>                
+              </div>
+
+              <div class="row">
+                <br>
+              </div>     
+              
+              <div class="row">
+                <div class="col-md-6 form-group">             
+                  <label for="type">&nbsp &nbsp Are your applications implemented in a software container? </label>
+                  <select name="container" id="container">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option> 
+                  </select>
+                </div>
+                <div class="col-md-6 form-group">                 
+                      
+                </div>                
+              </div>
+              <div class="row">
+                <br>
+              </div> 
+
+
+              <div class="row">                
+                <br>
+                <div class="col-md-6 form-group">
+             
+                  <label for="type" >&nbsp &nbspHow many services does your company handle? </label>
+                  <select name="container" id="container" required>
+                    <option value="uno a cinco">1-5</option>
+                    <option value="cinco-diez">5-10</option> 
+                    <option value="mayourdiez">+10</option>
+                  </select>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Does your company manage your services?" required>
+                </div>
+              </div>
+              <div class="row">
+                <br>
+              </div>
+
+              <!--
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -596,18 +748,27 @@
                   <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                 </div>
               </div>
+            -->
+            <!--
               <div class="form-group mt-3">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
               </div>
+
+            -->
+               <!--
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
               </div>
+                   -->
+
+               <!--
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              -->
+              <div class="text-center"><button type="submit">Send analysis</button></div>
             </form>
           </div>
 
@@ -693,7 +854,47 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+   <br>
+  <button class="back-to-top d-flex align-items-center justify-content-center"></button>
+  <div class="bubble" style="background: rgb(0, 102, 255);">
+    <div data-status="loaded" data-cover="true" class="lazy-img">
+      <img src="" alt class="lazy-img-loaded">
+    </div>
+  </div>
+
+  <!-- chatboot here-->
+  <!-- Botón fijo con ícono de chat -->
+  <div id="boton-chat">
+    <div id="boton-icono">
+      <i class="fa fa-comment"></i>
+      <i class="bi bi-chat-right-dots"></i>
+    </div>
+  </div>
+
+  <!-- Ventana modal con el chatbot -->
+  <div id="modal">
+    <div id="contenido-modal">
+        <h4>Chatbot - OFA</h4>
+        <p>Hello! I'm your OFA chatbot. Here you can learn about some of the OCI terms: </p>
+        <!-- Aquí puedes agregar el código para el chatbot real -->
+        <div id="chat-container">
+          <div id="chat-output"></div>
+          <input type="text" id="user-input" placeholder="Type here..." />    
+          <button id="send-button">Enviar</button>          
+        </div>
+        <br>
+
+      <!-- <button id="cerrar-modal"><i class="bi bi-x-square"></i></button> -->
+      <button id="cerrar-modal" class="cerrar">X</button>
+    </div>
+
+  </div>
+
+
+
+
+
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -706,6 +907,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/chatbot.js"></script>
 
 </body>
 
