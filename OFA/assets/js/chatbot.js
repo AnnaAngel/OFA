@@ -146,11 +146,12 @@
 
                 default:
                     console.log("I'm sorry, I couldn't understand well. Let's adjust our approach.");
-                    return "Sorry";
+                    return "I'm sorry, I couldn't understand well. Let's adjust our approach.";
             }
 
         } else {
-            console.log(`El elemento ${userMes} no está en el array.`);
+            console.log(`I'm sorry, I couldn't understand well. Let's adjust our approach.`);
+            return "I'm sorry, I couldn't understand well. Let's adjust our approach.";
         }
 
 
