@@ -1,0 +1,19 @@
+/* Contenedor para las imágenes */
+.container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Estilo para la imagen de fondo */
+  .background-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Estilo para la imagen superior */
+  .overlay-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }

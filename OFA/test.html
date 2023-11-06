@@ -1,3 +1,93 @@
+<style>
+
+.buttonEnviar {
+  background-color: #f44336; /* Green */
+  border: none;
+  color: white;
+  border-radius: 8px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+  /* Contenedor para las imágenes */
+  .container2 {
+  position: relative;
+  display: inline-block;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.prueba{
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.results {
+  position: relative;
+  display: inline-block;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.results-font {
+  background: #67b0d1;
+}
+/* Estilo para la imagen de fondo */
+.background-image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Estilo para la imagen superior */
+.overlay-image {
+  position: absolute;
+  display: block;
+  width: 70%;
+  height: 62%;
+  top: 5%;
+  left: 15%;
+  right: 15%;
+  
+}
+.elements-image{
+  position: absolute;
+  display: block;
+
+}
+.elements-image:hover{
+  transform: scale(1.2);
+  transition: transform .3s;
+}
+.elements-image {overflow:hidden;}
+.red{
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+</style>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,12 +95,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Inner Page - Squadfree Bootstrap Template</title>
+  <title>Oracle First Approach</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/oracle-logo.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -43,7 +133,7 @@
     <div class="container d-flex align-items-center justify-content-between position-relative">
 
       <div class="logo">
-        <h1 class="text-light"><a href="index.html"><span>Squadfree</span></a></h1>
+        <h1 class="text-light"><a href="index.html"><span>Oracle First Approach</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -122,18 +212,77 @@
     <section class="breadcrumbs">
       <div class="container">
 
-        <div class="d-flex justify-content-between align-items-center">
+        <!--<div class="d-flex justify-content-between align-items-center">
           <h2>Test Page</h2>
-          <!--<ol>
+          <ol>
             <li><a href="index.html">Home</a></li>
             <li>Inner Page</li>
-          </ol>-->
-        </div>
+          </ol>
+        </div>-->
 
       </div>
     </section><!-- End Breadcrumbs Section -->
 
-    <section id="contact" class="contact section-bg">
+    <div id="resultados" style="display: none;">
+      <!--<div id="resultados">-->  
+      <section class="inner-page">
+        <div class="container container2">
+          <img src="assets/img/compute2.png" width="1500" height="1200" class="background-image">
+          <img src="assets/img/extend.png" class="overlay-image" position-relative="absolute">
+          <img id="bd" src="assets/img/db.png" style="width: 4%; height: 7%; top: 39%; left: 47.5%;" class="elements-image">  
+          <img id="so" src="assets/img/so.png" style="width: 6%; height: 10%; top: 33%; left: 63%;" class="elements-image">
+          <img id="fw" src="assets/img/fw.png" style="width: 5%; height: 8%; top: 21%; left: 31%;" class="elements-image">
+          <img id="sv" src="assets/img/server.png" style="width: 5%; height: 8%; top: 47%; left: 31.5%;" class="elements-image">
+          <img id="sp" src="assets/img/support.png" style="width: 5%; height: 6%; top: 13%; left: 51.5%;" class="elements-image">
+          <img id="ln" src="assets/img/learning.png" style="width: 4%; height: 5%; top: 14%; left: 70%;" class="elements-image">
+          <img id="sc" src="assets/img/security.png" style="width: 8%; height: 7%; top: 36%; left: 14%;" class="elements-image">
+          <img id="bigd" src="assets/img/bigdata.png" style="width: 7%; height: 7%; top: 6%; left: 38%;" class="elements-image">
+          <img id="aws" src="assets/img/aws.png" style="width: 5%; height: 5%; top: 13%; left: 78%;" class="elements-image">
+          <img id="ic" src="assets/img/ic.png" style="width: 6%; height: 6%; top: 23%; left: 41%;" class="elements-image">
+          <img id="man" src="assets/img/manager.png" style="width: 7%; height: 7%; top: 12%; left: 17%;" class="elements-image">
+          <img id="page" src="assets/img/page.png" style="width: 5%; height: 5%; top: 55%; left: 67%;" class="elements-image">
+          <img id="pr" src="assets/img/process.png" style="width: 5%; height: 4%; top: 58.5%; left: 50.5%;" class="elements-image">
+          <img id="tech" src="assets/img/technology.png" style="width: 3.5%; height: 5%; top: 41%; left: 23.5%;" class="elements-image">
+          <img id="sso" src="assets/img/sso.png" style="width: 3.5%; height: 5%; top: 61%; left: 25%;" class="elements-image">
+          <img id="war" src="assets/img/warning.png" style="width: 4%; height: 5%; top: 39.5%; left: 74%;" class="elements-image">
+        </div>               
+      </section>
+      <section id="services" class="services">
+        <div class="container container2">
+        <div class="row">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" style="width: 50%;">
+          <div class="icon-box" data-aos="fade-up">
+            <div class="icon"><i class="bx bx-file"></i></div>
+            <h4 id="titulo" class="title">Element Display</a></h4>
+            <p id="contenido" class="description">You will be able to view all the content presented regarding the elements that qualify for your business.</p>
+          </div>
+        </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" style="width: 50%;">
+          <div class="icon-box" data-aos="fade-up">
+            <div class="icon"><i class="bi bi-journal-richtext"></i></div>
+            <h4 id="tituloResume" class="title">Architecture Summary</h4>
+            <p id="resume" class="description">You will be able to view all the content presented regarding the elements that qualify for your business.</p>
+            <br><h4 id="tituloCost" class="title">Costs</h4>
+            <p id="resumeCost" class="description">This are de cost for the Architecture</p>
+            <br><h3 id="tituloContact" class="title">Call US Sales</h3>
+            <h5 id="numberContact" >+1.800.633.0738</h5>
+            <p id="resumeContact" style="font-size: 12px;">Complete list of <a href="https://www.oracle.com/corporate/contact/global.html"> country numbers</a></p>
+            <br><p id="legend" style="font-size: 10px;">These costs are approximate and may change without prior notice, please contact the sales area to consult the actual amounts as well as follow up on the proposal.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+      </section>
+    </div>
+
+
+
+
+
+
+    <div id="form">
+    <section id="contact" class="contact section-bg" >
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -144,7 +293,8 @@
         <div class="row">
 
           <div class="col-lg-14">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <!--<form action="forms/contact.php" method="post" role="form" class="php-email-form">-->
+            <!--<form action="representation.html" id="Formulario" name="Formulario" method="post" role="form" class="php-email-form">-->
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Company Name" required>
@@ -155,65 +305,638 @@
               </div>
 
               <div class="form-group mt-3">
-                <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Preference</label>
-                <select class="form-control" class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" required>
-                  <option selected>Choose...</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Country</label>
+                <select name="Country" class="form-control" class="custom-select my-1 mr-sm-2" id="Country" required>
+                <option value="" selected="selected">Select Country</option> 
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Albania">Albania</option> 
+                <option value="Algeria">Algeria</option> 
+                <option value="American Samoa">American Samoa</option> 
+                <option value="Andorra">Andorra</option> 
+                <option value="Angola">Angola</option> 
+                <option value="Anguilla">Anguilla</option> 
+                <option value="Antarctica">Antarctica</option> 
+                <option value="Antigua and Barbuda">Antigua and Barbuda</option> 
+                <option value="Argentina">Argentina</option> 
+                <option value="Armenia">Armenia</option> 
+                <option value="Aruba">Aruba</option> 
+                <option value="Australia">Australia</option> 
+                <option value="Austria">Austria</option> 
+                <option value="Azerbaijan">Azerbaijan</option> 
+                <option value="Bahamas">Bahamas</option> 
+                <option value="Bahrain">Bahrain</option> 
+                <option value="Bangladesh">Bangladesh</option> 
+                <option value="Barbados">Barbados</option> 
+                <option value="Belarus">Belarus</option> 
+                <option value="Belgium">Belgium</option> 
+                <option value="Belize">Belize</option> 
+                <option value="Benin">Benin</option> 
+                <option value="Bermuda">Bermuda</option> 
+                <option value="Bhutan">Bhutan</option> 
+                <option value="Bolivia">Bolivia</option> 
+                <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option> 
+                <option value="Botswana">Botswana</option> 
+                <option value="Bouvet Island">Bouvet Island</option> 
+                <option value="Brazil">Brazil</option> 
+                <option value="British Indian Ocean Territory">British Indian Ocean Territory</option> 
+                <option value="Brunei Darussalam">Brunei Darussalam</option> 
+                <option value="Bulgaria">Bulgaria</option> 
+                <option value="Burkina Faso">Burkina Faso</option> 
+                <option value="Burundi">Burundi</option> 
+                <option value="Cambodia">Cambodia</option> 
+                <option value="Cameroon">Cameroon</option> 
+                <option value="Canada">Canada</option> 
+                <option value="Cape Verde">Cape Verde</option> 
+                <option value="Cayman Islands">Cayman Islands</option> 
+                <option value="Central African Republic">Central African Republic</option> 
+                <option value="Chad">Chad</option> 
+                <option value="Chile">Chile</option> 
+                <option value="China">China</option> 
+                <option value="Christmas Island">Christmas Island</option> 
+                <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option> 
+                <option value="Colombia">Colombia</option> 
+                <option value="Comoros">Comoros</option> 
+                <option value="Congo">Congo</option> 
+                <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option> 
+                <option value="Cook Islands">Cook Islands</option> 
+                <option value="Costa Rica">Costa Rica</option> 
+                <option value="Cote D'ivoire">Cote D'ivoire</option> 
+                <option value="Croatia">Croatia</option> 
+                <option value="Cuba">Cuba</option> 
+                <option value="Cyprus">Cyprus</option> 
+                <option value="Czech Republic">Czech Republic</option> 
+                <option value="Denmark">Denmark</option> 
+                <option value="Djibouti">Djibouti</option> 
+                <option value="Dominica">Dominica</option> 
+                <option value="Dominican Republic">Dominican Republic</option> 
+                <option value="Ecuador">Ecuador</option> 
+                <option value="Egypt">Egypt</option> 
+                <option value="El Salvador">El Salvador</option> 
+                <option value="Equatorial Guinea">Equatorial Guinea</option> 
+                <option value="Eritrea">Eritrea</option> 
+                <option value="Estonia">Estonia</option> 
+                <option value="Ethiopia">Ethiopia</option> 
+                <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option> 
+                <option value="Faroe Islands">Faroe Islands</option> 
+                <option value="Fiji">Fiji</option> 
+                <option value="Finland">Finland</option> 
+                <option value="France">France</option> 
+                <option value="French Guiana">French Guiana</option> 
+                <option value="French Polynesia">French Polynesia</option> 
+                <option value="French Southern Territories">French Southern Territories</option> 
+                <option value="Gabon">Gabon</option> 
+                <option value="Gambia">Gambia</option> 
+                <option value="Georgia">Georgia</option> 
+                <option value="Germany">Germany</option> 
+                <option value="Ghana">Ghana</option> 
+                <option value="Gibraltar">Gibraltar</option> 
+                <option value="Greece">Greece</option> 
+                <option value="Greenland">Greenland</option> 
+                <option value="Grenada">Grenada</option> 
+                <option value="Guadeloupe">Guadeloupe</option> 
+                <option value="Guam">Guam</option> 
+                <option value="Guatemala">Guatemala</option> 
+                <option value="Guinea">Guinea</option> 
+                <option value="Guinea-bissau">Guinea-bissau</option> 
+                <option value="Guyana">Guyana</option> 
+                <option value="Haiti">Haiti</option> 
+                <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option> 
+                <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option> 
+                <option value="Honduras">Honduras</option> 
+                <option value="Hong Kong">Hong Kong</option> 
+                <option value="Hungary">Hungary</option> 
+                <option value="Iceland">Iceland</option> 
+                <option value="India">India</option> 
+                <option value="Indonesia">Indonesia</option> 
+                <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option> 
+                <option value="Iraq">Iraq</option> 
+                <option value="Ireland">Ireland</option> 
+                <option value="Israel">Israel</option> 
+                <option value="Italy">Italy</option> 
+                <option value="Jamaica">Jamaica</option> 
+                <option value="Japan">Japan</option> 
+                <option value="Jordan">Jordan</option> 
+                <option value="Kazakhstan">Kazakhstan</option> 
+                <option value="Kenya">Kenya</option> 
+                <option value="Kiribati">Kiribati</option> 
+                <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option> 
+                <option value="Korea, Republic of">Korea, Republic of</option> 
+                <option value="Kuwait">Kuwait</option> 
+                <option value="Kyrgyzstan">Kyrgyzstan</option> 
+                <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option> 
+                <option value="Latvia">Latvia</option> 
+                <option value="Lebanon">Lebanon</option> 
+                <option value="Lesotho">Lesotho</option> 
+                <option value="Liberia">Liberia</option> 
+                <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option> 
+                <option value="Liechtenstein">Liechtenstein</option> 
+                <option value="Lithuania">Lithuania</option> 
+                <option value="Luxembourg">Luxembourg</option> 
+                <option value="Macao">Macao</option> 
+                <option value="North Macedonia">North Macedonia</option> 
+                <option value="Madagascar">Madagascar</option> 
+                <option value="Malawi">Malawi</option> 
+                <option value="Malaysia">Malaysia</option> 
+                <option value="Maldives">Maldives</option> 
+                <option value="Mali">Mali</option> 
+                <option value="Malta">Malta</option> 
+                <option value="Marshall Islands">Marshall Islands</option> 
+                <option value="Martinique">Martinique</option> 
+                <option value="Mauritania">Mauritania</option> 
+                <option value="Mauritius">Mauritius</option> 
+                <option value="Mayotte">Mayotte</option> 
+                <option value="Mexico">Mexico</option> 
+                <option value="Micronesia, Federated States of">Micronesia, Federated States of</option> 
+                <option value="Moldova, Republic of">Moldova, Republic of</option> 
+                <option value="Monaco">Monaco</option> 
+                <option value="Mongolia">Mongolia</option> 
+                <option value="Montserrat">Montserrat</option> 
+                <option value="Morocco">Morocco</option> 
+                <option value="Mozambique">Mozambique</option> 
+                <option value="Myanmar">Myanmar</option> 
+                <option value="Namibia">Namibia</option> 
+                <option value="Nauru">Nauru</option> 
+                <option value="Nepal">Nepal</option> 
+                <option value="Netherlands">Netherlands</option> 
+                <option value="Netherlands Antilles">Netherlands Antilles</option> 
+                <option value="New Caledonia">New Caledonia</option> 
+                <option value="New Zealand">New Zealand</option> 
+                <option value="Nicaragua">Nicaragua</option> 
+                <option value="Niger">Niger</option> 
+                <option value="Nigeria">Nigeria</option> 
+                <option value="Niue">Niue</option> 
+                <option value="Norfolk Island">Norfolk Island</option> 
+                <option value="Northern Mariana Islands">Northern Mariana Islands</option> 
+                <option value="Norway">Norway</option> 
+                <option value="Oman">Oman</option> 
+                <option value="Pakistan">Pakistan</option> 
+                <option value="Palau">Palau</option> 
+                <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option> 
+                <option value="Panama">Panama</option> 
+                <option value="Papua New Guinea">Papua New Guinea</option> 
+                <option value="Paraguay">Paraguay</option> 
+                <option value="Peru">Peru</option> 
+                <option value="Philippines">Philippines</option> 
+                <option value="Pitcairn">Pitcairn</option> 
+                <option value="Poland">Poland</option> 
+                <option value="Portugal">Portugal</option> 
+                <option value="Puerto Rico">Puerto Rico</option> 
+                <option value="Qatar">Qatar</option> 
+                <option value="Reunion">Reunion</option> 
+                <option value="Romania">Romania</option> 
+                <option value="Russian Federation">Russian Federation</option> 
+                <option value="Rwanda">Rwanda</option> 
+                <option value="Saint Helena">Saint Helena</option> 
+                <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option> 
+                <option value="Saint Lucia">Saint Lucia</option> 
+                <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option> 
+                <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option> 
+                <option value="Samoa">Samoa</option> 
+                <option value="San Marino">San Marino</option> 
+                <option value="Sao Tome and Principe">Sao Tome and Principe</option> 
+                <option value="Saudi Arabia">Saudi Arabia</option> 
+                <option value="Senegal">Senegal</option> 
+                <option value="Serbia and Montenegro">Serbia and Montenegro</option> 
+                <option value="Seychelles">Seychelles</option> 
+                <option value="Sierra Leone">Sierra Leone</option> 
+                <option value="Singapore">Singapore</option> 
+                <option value="Slovakia">Slovakia</option> 
+                <option value="Slovenia">Slovenia</option> 
+                <option value="Solomon Islands">Solomon Islands</option> 
+                <option value="Somalia">Somalia</option> 
+                <option value="South Africa">South Africa</option> 
+                <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option> 
+                <option value="Spain">Spain</option> 
+                <option value="Sri Lanka">Sri Lanka</option> 
+                <option value="Sudan">Sudan</option> 
+                <option value="Suriname">Suriname</option> 
+                <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option> 
+                <option value="Swaziland">Swaziland</option> 
+                <option value="Sweden">Sweden</option> 
+                <option value="Switzerland">Switzerland</option> 
+                <option value="Syrian Arab Republic">Syrian Arab Republic</option> 
+                <option value="Taiwan, Province of China">Taiwan, Province of China</option> 
+                <option value="Tajikistan">Tajikistan</option> 
+                <option value="Tanzania, United Republic of">Tanzania, United Republic of</option> 
+                <option value="Thailand">Thailand</option> 
+                <option value="Timor-leste">Timor-leste</option> 
+                <option value="Togo">Togo</option> 
+                <option value="Tokelau">Tokelau</option> 
+                <option value="Tonga">Tonga</option> 
+                <option value="Trinidad and Tobago">Trinidad and Tobago</option> 
+                <option value="Tunisia">Tunisia</option> 
+                <option value="Turkey">Turkey</option> 
+                <option value="Turkmenistan">Turkmenistan</option> 
+                <option value="Turks and Caicos Islands">Turks and Caicos Islands</option> 
+                <option value="Tuvalu">Tuvalu</option> 
+                <option value="Uganda">Uganda</option> 
+                <option value="Ukraine">Ukraine</option> 
+                <option value="United Arab Emirates">United Arab Emirates</option> 
+                <option value="United Kingdom">United Kingdom</option> 
+                <option value="United States">United States</option> 
+                <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option> 
+                <option value="Uruguay">Uruguay</option> 
+                <option value="Uzbekistan">Uzbekistan</option> 
+                <option value="Vanuatu">Vanuatu</option> 
+                <option value="Venezuela">Venezuela</option> 
+                <option value="Viet Nam">Viet Nam</option> 
+                <option value="Virgin Islands, British">Virgin Islands, British</option> 
+                <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option> 
+                <option value="Wallis and Futuna">Wallis and Futuna</option> 
+                <option value="Western Sahara">Western Sahara</option> 
+                <option value="Yemen">Yemen</option> 
+                <option value="Zambia">Zambia</option> 
+                <option value="Zimbabwe">Zimbabwe</option>
                 </select>
               </div>
+
+                <div class="form-group mt-3">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Comercial Line</label>
+                  <select name="ComercialLine" class="form-control" class="custom-select my-1 mr-sm-2" id="ComercialLine" required>
+                  <option value="" selected="selected">Comercial Line</option> 
+                    <option value="Information Technology (IT)">Information Technology (IT): Software development, technical support services, hardware, IT consulting, cybersecurity, and more.</option>
+                    <option value="Retail">Retail: Retail sale of products, both in physical stores and online.</option>
+                    <option value="Manufacturing">Manufacturing: Production of goods and products, ranging from automobiles to chemicals.</option>
+                    <option value="Healthcare">Healthcare: Hospitals, clinics, health insurance, pharmaceuticals, among others.</option> 
+                    <option value="Finance and Banking">Finance and Banking: Banks, financial institutions, investment services, insurance, and asset management.</option> 
+                    <option value="Food and Beverages">Food and Beverages: Food production and sale, restaurants, beverages, and catering services.</option> 
+                    <option value="Energy">Energy: Generation and distribution of electrical power, oil, gas, renewable energy, and utilities services.</option> 
+                    <option value="Real Estate">Real Estate: Buying, selling, and property management, real estate development, and leasing.</option> 
+                    <option value="Education">Education: Schools, universities, online learning platforms, and training services.</option> 
+                    <option value="Transportation and Logistics">Transportation and Logistics: Transportation of goods and people, logistics, storage, and supply chain management.</option> 
+                    <option value="Media and Entertainment">Media and Entertainment: Television, film, music, publications, video games, and streaming services.</option> 
+                    <option value="Tourism and Hospitality">Tourism and Hospitality: Hotels, travel agencies, restaurants, airlines, and tourism services.</option> 
+                    <option value="Agriculture">Agriculture: Food cultivation, livestock, fishing, and agribusiness.</option> 
+                    <option value="Construction">Construction: Building construction, infrastructure, and civil engineering projects.</option> 
+                    <option value="Automotive">Automotive: Manufacturing and sale of vehicles, as well as automotive-related services.</option> 
+                    <option value="Fashion and Textiles">Fashion and Textiles: Design, manufacturing, and sale of clothing, accessories, and textiles.</option> 
+                    <option value="Consulting">Consulting: Advisory and consulting services in various areas, such as strategy, human resources, technology, and more.</option> 
+                    <option value="Environmental and Sustainability">Environmental and Sustainability: Companies focused on environmental conservation and sustainable development.</option> 
+                    <option value="Professional Services">Professional Services: Lawyers, accountants, human resources consultants, and other independent professionals.</option> 
+                    <option value="Clean Technology">Clean Technology: Development of environmentally friendly technologies and solutions.</option> 
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Quantity of Employees</label>
+                  <input type="number" name="employees" class="form-control" id="employees" placeholder="Quantity of employees" required>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Number of business departments</label>
+                  <input type="number" name="departments" class="form-control" id="departments" placeholder="business departments" required>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Number of customers</label>
+                  <input type="number" name="customers" class="form-control" id="customers" placeholder="customers" required>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Commercial Scale</label>
+                  <select name="ComercialScale" class="form-control" class="custom-select my-1 mr-sm-2" id="ComercialScale" required>
+                    <option value="" selected="selected">commercial scale</option> 
+                    <option value="Local">Local Scale</option> 
+                    <option value="Regional">Regional Scale</option> 
+                    <option value="National">National Scale</option> 
+                    <option value="Global">Global Scale</option> 
+                    <option value="Continental">Continental Scale</option> 
+                    <option value="Urban">Urban Scale</option> 
+                    <option value="Rural">Rural Scale</option> 
+                    <option value="Municipal">Municipal Scale</option> 
+                    <option value="State">State Scale</option> 
+                    <option value="International">International Scale</option> 
+                    <option value="Hemispheric">Hemispheric Scale</option> 
+                    <option value="Planetary">Planetary Scale</option> 
+                    <option value="Micro">Micro Scale</option> 
+                    <option value="Macro">Macro Scale</option> 
+                    <option value="Subcontinental">Subcontinental Scale</option> 
+                    <option value="Metropolitan">Metropolitan Scale</option> 
+                    <option value="Territorial">Territorial Scale</option> 
+                    <option value="Neighborhood">Neighborhood Scale</option> 
+                    <option value="Global-Local">Global-Local Scale</option> 
+                    <option value="Intercontinental">Intercontinental Scale</option> 
+                    <option value="Community">Community Scale</option> 
+                    <option value="City">City Scale</option> 
+                    <option value="Statewide">Statewide Scale</option> 
+                    <option value="Bioregional">Bioregional Scale</option> 
+                    <option value="Transnational">Transnational Scale</option> 
+                    <option value="Zonal">Zonal Scale</option> 
+                    <option value="National-Local">National-Local Scale</option> 
+                    <option value="Local-Global">Local-Global Scale</option> 
+                    <option value="Metropolitan-Regional">Metropolitan-Regional Scale</option> 
+                  </select>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Number of countries of us customers</label>
+                  <input type="number" name="countries" class="form-control" id="countries" placeholder="countries-customers" required>
+                </div>
+
+
+                <div class="form-group mt-3">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Does the company have servers?</label>
+                  <select name="servers1" id="servers1" class="form-control" class="custom-select my-1 mr-sm-2" required>
+                    <option value="" selected="selected">servers</option> 
+                    <option value="si">Si</option> 
+                    <option value="no">No</option> 
+                  </select>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">How many servers?</label>
+                  <input type="number" name="servers2" class="form-control" id="servers2" placeholder="servers" required>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">What operating system do you use?</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" value="Oracle Linux" id="SO1" name="SO" class="custom-control-input">
+                  <label class="custom-control-label" for="SO1">Oracle Linux</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" value="Linux" id="SO1" name="SO" class="custom-control-input">
+                  <label class="custom-control-label" for="SO2">Linux</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" value="Red Had" id="SO1" name="SO" class="custom-control-input">
+                  <label class="custom-control-label" for="SO3">Red Had</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" value="Windows Server" id="SO1" name="SO" class="custom-control-input">
+                  <label class="custom-control-label" for="SO4">Windows Server</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" value="Unix" id="SO1" name="SO" class="custom-control-input">
+                  <label class="custom-control-label" for="SO5">Unix</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" value="IBM" id="SO1" name="SO" class="custom-control-input">
+                  <label class="custom-control-label" for="SO6">IBM</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" value="Oracle Solaris" id="SO1" name="SO" class="custom-control-input">
+                  <label class="custom-control-label" for="SO7">Oracle Solaris</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" value="Other" id="SO1" name="SO" class="custom-control-input">
+                  <label class="custom-control-label" for="SO8">Other</label>
+                </div>
+
+
+                <div class="form-group mt-3">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Does the company have Data Base?</label>
+                  <select name="db1" id="db1" class="form-control" class="custom-select my-1 mr-sm-2" required>
+                    <option value="" selected="selected">db</option> 
+                    <option value="si">Si</option> 
+                    <option value="no">No</option> 
+                  </select>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">How many data base?</label>
+                  <input type="number" name="db2" class="form-control" id="db2" placeholder="db" required>
+                </div>
+
+
+                <div class="col-md-6 form-group">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">What data base system do you use?</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" value="Microsoft SQL Server" id="db" name="db" class="custom-control-input">
+                  <label class="custom-control-label" for="db1">Microsoft SQL Server</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" value="MySQL" id="db" name="db" class="custom-control-input">
+                  <label class="custom-control-label" for="db2">MySQL</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" value="PostgreSQL" id="db" name="db" class="custom-control-input">
+                  <label class="custom-control-label" for="db3">PostgreSQL</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" value="Oracle Database" id="db" name="db" class="custom-control-input">
+                  <label class="custom-control-label" for="db4">Oracle Database</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" value="SQLite" id="db" name="db" class="custom-control-input">
+                  <label class="custom-control-label" for="db5">SQLite</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" value="IBM Db2" id="db" name="db" class="custom-control-input">
+                  <label class="custom-control-label" for="db6">IBM Db2</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" value="MariaDB" id="db" name="db" class="custom-control-input">
+                  <label class="custom-control-label" for="db7">MariaDB</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" value="Amazon RDS" id="db" name="db" class="custom-control-input">
+                  <label class="custom-control-label" for="db8">Amazon RDS</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" value="Cassandra" id="db" name="db" class="custom-control-input">
+                  <label class="custom-control-label" for="db9">Cassandra</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" value="MongoDB" id="db" name="db" class="custom-control-input">
+                  <label class="custom-control-label" for="db10">MongoDB</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" value="Couchbase" id="db" name="db" class="custom-control-input">
+                  <label class="custom-control-label" for="db11">Couchbase</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" value="Other" id="db" name="db" class="custom-control-input">
+                  <label class="custom-control-label" for="db12">Other</label>
+                </div>
+
+
+                <div class="col-md-12 form-group">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">BD Version</label>
+                  <input type="text" name="bd-version" class="form-control" id="bd-version" placeholder="BD Version" required>
+                </div>
+
+
+                <div class="form-group mt-3">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Do you have a operation site?</label>
+                  <select name="site" id="site" class="form-control" class="custom-select my-1 mr-sm-2" required>
+                    <option value="" selected="selected">site</option> 
+                    <option value="si">Si</option> 
+                    <option value="no">No</option> 
+                  </select>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Who manages the site?</label>
+                  <select name="site2" class="form-control" class="custom-select my-1 mr-sm-2" id="site2" required>
+                    <option value="" selected="selected">commercial scale</option> 
+                    <option value="Yourself">Yourself</option> 
+                    <option value="Other Company">Other company</option> 
+                  </select>
+                </div>
+
+                <div class="col-md-12 form-group">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Name of company that manage the site?</label>
+                  <input type="text" name="site3" class="form-control" id="site3" placeholder="Manage Site" required>
+                </div>
+
+                <div class="col-md-12 form-group">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Site Location</label>
+                  <input type="text" name="site4" class="form-control" id="site4" placeholder="Site Location" required>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Commercial Business</label>
+                  <select name="commercial" class="form-control" class="custom-select my-1 mr-sm-2" id="commercial" required>
+                    <option value="" selected="selected">commercial business</option> 
+                    <option value="Retail store">Retail store</option>
+                    <option value="Service provider">Service provider</option>
+                    <option value="Manufacturing company">Manufacturing company</option>
+                    <option value="Technology firm">Technology firm</option>
+                    <option value="Food and beverage industry">Food and beverage industry</option>
+                    <option value="Hospitality sector">Hospitality sector</option>
+                    <option value="Financial institution">Financial institution</option> 
+                    <option value="Healthcare provider">Healthcare provider</option>
+                    <option value="Construction company">Construction company</option>
+                    <option value="Transportation and logistics">Transportation and logistics</option>
+                    <option value="Entertainment industry">Entertainment industry</option>
+                    <option value="Real estate agency">Real estate agency</option>
+                    <option value="Consulting firm">Consulting firm</option>
+                    <option value="Legal services">Legal services</option>
+                    <option value="Nonprofit organization">Nonprofit organization</option>
+                    <option value="Education sector">Education sector</option>
+                    <option value="Agricultural business">Agricultural business</option>
+                    <option value="Energy company">Energy company</option>
+                    <option value="Advertising agency">Advertising agency</option>
+                    <option value="Marketing firm">Marketing firm</option>
+                    <option value="E-commerce business">E-commerce business</option>
+                    <option value="Automotive industry">Automotive industry</option>
+                    <option value="Insurance company">Insurance company</option>
+                    <option value="Environmental services">Environmental services</option>
+                    <option value="Cleaning services">Cleaning services</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Do you have Firewall?</label>
+                  <select name="firewall1" class="form-control" class="custom-select my-1 mr-sm-2" id="firewall1" required>
+                    <option value="" selected="selected">site</option> 
+                    <option value="si">Si</option> 
+                    <option value="no">No</option> 
+                  </select>
+                </div>
+
+                <div class="col-md-12 form-group">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">That Firewall?</label>
+                  <input type="text" name="firewall2" class="form-control" id="firewall2" placeholder="Applications" required>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">How many applications do you use to manage your business?</label>
+                  <input type="number" name="apps" class="form-control" id="apps" placeholder="apps" required>
+                </div>
+
+                <div class="col-md-12 form-group">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">That applications?</label>
+                  <input type="text" name="apps2" class="form-control" id="apps2" placeholder="Applications" required>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Do you have web applications?</label>
+                  <select name="apps3" class="form-control" class="custom-select my-1 mr-sm-2" id="apps3" required>
+                    <option value="" selected="selected">site</option> 
+                    <option value="si">Si</option> 
+                    <option value="no">No</option> 
+                  </select>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Do you use APIS?</label>
+                  <select name="apps4" class="form-control" class="custom-select my-1 mr-sm-2" id="apps4" required>
+                    <option value="" selected="selected">site</option> 
+                    <option value="si">Si</option> 
+                    <option value="no">No</option> 
+                  </select>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Do you have an Access Management Provider?</label>
+                  <select name="IAM" class="form-control" class="custom-select my-1 mr-sm-2" id="IAM" required>
+                    <option value="" selected="selected">site</option> 
+                    <option value="si">Si</option> 
+                    <option value="no">No</option> 
+                  </select>
+                </div>
+
+                <div class="col-md-12 form-group">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Which?</label>
+                  <input type="text" name="IAM2" class="form-control" id="IAM2" placeholder="Applications" required>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Who manages it?</label>
+                  <select name="IAM3" class="form-control" class="custom-select my-1 mr-sm-2" id="IAM3" required>
+                    <option value="" selected="selected">Access Management Provider</option> 
+                    <option value="Yourself">Yourself</option> 
+                    <option value="OtherCompany">Other company</option> 
+                  </select>
+                </div>
+
+                <div class="col-md-12 form-group">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Name of company that manage the AMP?</label>
+                  <input type="text" name="IAM4" class="form-control" id="IAM4" placeholder="Manage Site" required>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Do you have containers to deploy your services?</label>
+                  <select name="containers" class="form-control" class="custom-select my-1 mr-sm-2" id="containers" required>
+                    <option value="" selected="selected">site</option> 
+                    <option value="si">Si</option> 
+                    <option value="no">No</option> 
+                  </select>
+                </div>
+
+                <div class="col-md-12 form-group">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Which?</label>
+                  <input type="text" name="containers2" class="form-control" id="containers2" placeholder="containers" required>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Do you have any Cloud services?</label>
+                  <select name="cloud" class="form-control" class="custom-select my-1 mr-sm-2" id="cloud" required>
+                    <option value="" selected="selected">Cloud</option> 
+                    <option value="si">Si</option> 
+                    <option value="no">No</option> 
+                  </select>
+                </div>
+
+                <div class="col-md-12 form-group">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Which?</label>
+                  <input type="text" name="cloud2" class="form-control" id="cloud2" placeholder="cloud service" required>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">What is the reason why you are looking for OCI services?</label>
+                  <textarea class="form-control" name="reason" id="reason" rows="5" placeholder="Reason" required></textarea>
+                </div>
+
               <fieldset disabled>
               </fieldset>
-              <div class="custom-control custom-checkbox my-1 mr-sm-2">
-                <input type="checkbox" class="custom-control-input" id="customControlInline" required>
-                <label  class="custom-control-label" for="customControlInline">Remember my preference</label>
-              </div>
-            
-              <div class="custom-file">
-                <input type="file" class="form-control" class="custom-file-input" id="customFile">
-                <label class="custom-file-label" for="customFile">Choose file</label>
-              </div>
-
-              <div class="col-auto">
-                <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" id="form11Example4" checked />
-                  <label class="form-control" class="form-check-label" for="form11Example4">
-                    Checked switch checkbox input
-                  </label>
-                </div>
-              </div>
-
-
-              <div class="custom-control custom-radio">
-                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
-              </div>
-
-
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Request</button></div>
-            </form>
+              
+             
+              <div class="text-center"><button id="enviar" name="enviar" type="submit" class="buttonEnviar">Send Request</button></div>
+            <!--</form>-->
           </div>
 
         </div>
 
       </div>
-      
     </section>
-    
-
+   </div>
 
   </main><!-- End #main -->
 
@@ -225,13 +948,12 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
-              <h3>Squadfree</h3>
-              <p class="pb-3"><em>Qui repudiandae et eum dolores alias sed ea. Qui suscipit veniam excepturi quod.</em></p>
+              <h3>Oracle First Approach</h3>
+              <p class="pb-3"><em>The best portal to analyze the architecture in search of points of improvement.</em></p>
               <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                Call US Sales <br>
+                <strong>Phone:</strong> +1.800.633.0738<br>
+                <strong>Email:</strong> sales@oracle.com<br>
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -243,7 +965,7 @@
             </div>
           </div>
 
-          <div class="col-lg-2 col-md-6 footer-links">
+          <!--<div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
@@ -272,7 +994,7 @@
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
 
-          </div>
+          </div>-->
 
         </div>
       </div>
@@ -280,14 +1002,14 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Squadfree</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Oracle</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="">Team CSS</a>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -309,3 +1031,262 @@
 </body>
 
 </html>
+
+
+<script>
+    /*document.getElementById('#enviar').addEventListener('click', function(e) {
+        e.preventDefault();
+        enviar_formulario();
+    })*/
+
+
+    function enviar_formulario() {
+      //let dato = document.getElementsByName('name')[0].value;
+      //alert(dato);
+
+      let formulario = document.getElementById('Formulario');
+      formulario.submit();
+    }
+</script>
+
+<script>
+  const btn = document.querySelector("#enviar");
+  //const tittle2 = document.querySelector("#tittle");
+  const dato = 'p';
+
+  
+  btn.addEventListener("click", (event) => {
+
+    var testSection = document.getElementById('form');
+    testSection.style.display = "none";
+
+    var restSection = document.getElementById('resultados');
+    restSection.style.display = "inline";
+    //restSection.style.visibility = "visible";
+
+    //dato = 
+    //tittle.textContent = document.getElementById('campo').value;
+
+
+
+    if (document.getElementById('servers1').value == "no") {
+        imgSO.style.display = "none";
+    } 
+    if (document.getElementById('db1').value == "no") {
+        imgBD.style.display = "none";
+    }
+    //TENTATIVO
+    if (document.getElementById('site').value == "no") {
+        imgSP.style.display = "none";
+    }
+    if (document.getElementById('cloud').value == "no") {
+        imgMAN.style.display = "none";
+    }
+    if (document.getElementById('containers').value == "si") {
+        imgTECH.style.display = "none";
+    }
+
+
+
+    var Resume = "";
+    var CostoTotal = 0;
+    var costServers = 0;
+    var costDB = 0;
+    var costFirewall = 0;
+    var costWebApp = 0; 
+    var costApps = 0;
+
+
+    Resume = Resume + "The company "+document.getElementById('name').value.toString()+" located in "+document.getElementById('Country').value.toString()+" which currently has a commercial line "+document.getElementById('ComercialLine').value.toString()+" and you have a commercial business "+document.getElementById('commercial').value.toString()+", with a number of commercial departments of "+document.getElementById('departments').value.toString()+" and a current number of employees of "+document.getElementById('employees').value.toString()+".\nIt currently has a territorial scale "+document.getElementById('ComercialScale').value.toString()+" and it's in "+document.getElementById('countries').value.toString()+" different countries.";
+    
+    if (document.getElementById('servers1').value == "si" && document.getElementById('servers2').value != 0) {
+      Resume = Resume + "\nBecause it has a number of "+document.getElementById('servers2').value.toString()+" servers and currently the servers have an operating system "+document.querySelector('input[type=radio][name=SO]:checked').value.toString();+", ";
+      costServers = (document.getElementById('servers2').value * 31.78);
+    }
+    if (document.getElementById('db1').value == "si" && document.getElementById('db2').value != 0) {
+      Resume = Resume + " in the same way, it has a number of databases "+document.getElementById('db2').value.toString()+" and they have databases with a system "+document.querySelector('input[type=radio][name=db]:checked').value.toString();+".";
+      costDB = (document.getElementById('db2').value * 43.37);
+    }
+    if (document.getElementById('site').value == "si") {
+      Resume = Resume + "\n, It has a site located in "+document.getElementById('site4').value.toString()+" and is currently managed by "+document.getElementById('site2').value.toString()+", which is a great advantage of using OCI since the servers and the service are managed by Oracle and great savings will be evident in the administrative part as well as administration problems.";
+    }
+    if (document.getElementById('firewall1').value == "si") {
+      Resume = Resume + "\nHas a firewall "+document.getElementById('firewall2').value.toString()+" but with OCI you will obtain maximum security in servers, access and transactions.";
+      costFirewall = 2046.00;
+    }
+    if (document.getElementById('apps').value != 0) {
+      Resume = Resume + "\nHas with "+document.getElementById('apps').value.toString()+" applications with which you manage all the operations of your company today, ";
+      costApps = (2468.29 * (document.getElementById('apps').value/3));
+    }
+    if (document.getElementById('apps3').value == "si") {
+      Resume = Resume + "In the same way they have web applications and within OCI it will be very easy to manage these services, ";
+      costWebApp = 660.00;
+    }
+    if (document.getElementById('apps4').value == "si") {
+      Resume = Resume + "They also consume API services, which with Oracle Integration Cloud will be extremely useful for their consumption as well as process integrations. ";
+    }
+    if (document.getElementById('IAM').value == "si") {
+      Resume = Resume + "\nThey currently have an Access Management Provider for the management of user accounts, the OCI services are fully compatible with the AM of their choice such as the current one and this task is too simple which will not require support for the administration of these Homeworks. ";
+    }
+    if (document.getElementById('cloud').value == "si") {
+      Resume = Resume + "\nCurrently they already have Cloud services which will make it very easy to become familiar with what Oracle can offer you.";
+    }
+    
+    
+
+    CostoTotal = costServers + costDB + costFirewall + costWebApp + costApps;
+    resumeCost.textContent = "According to the analysis of what was entered as well as the use in transactions, capacity and scope of your current scheme, the recommendation is an Intermediate membership with an approximate cost of $"+CostoTotal+" dlls a month, with this you will have many other services apart from the current, some of them are shown in the illustration above.";
+    resume.textContent = Resume.toString();
+  });
+</script>
+
+<script>
+  const tituloResume = document.querySelector("#tituloResume");
+  const resume = document.querySelector("#resume");
+  const resumeCost = document.querySelector("#resumeCost");
+
+  const tittle = document.querySelector("#titulo");
+  const contenido = document.querySelector("#contenido");
+  const imgBD = document.querySelector("#bd");
+  const imgSO = document.querySelector("#so");
+  const imgFW = document.querySelector("#fw");
+  const imgSV = document.querySelector("#sv");
+  const imgSP = document.querySelector("#sp");
+  const imgLN = document.querySelector("#ln");
+  const imgSC = document.querySelector("#sc");
+  const imgBIGD = document.querySelector("#bigd");
+  const imgAWS = document.querySelector("#aws");
+  const imgIC = document.querySelector("#ic");
+  const imgMAN = document.querySelector("#man");
+  const imgPAGE = document.querySelector("#page");
+  const imgPR = document.querySelector("#pr");
+  const imgTECH = document.querySelector("#tech");
+  const imgSSO = document.querySelector("#sso");
+  const imgWAR = document.querySelector("#war");
+
+
+
+  //BD
+  imgBD.addEventListener("click", (event) => {
+    tittle.textContent = `OCI Database Management`;
+    contenido.textContent = `Con Database Management Cloud Service, los administradores de bases de datos disponen de una consola unificada para las bases de datos on-premises y en la nube con prestaciones de gestión de bases de datos para todo el ciclo de vida que abarcan la supervisión, la gestión del rendimiento, el ajuste y la administración. Utilice diagnósticos y ajustes avanzados de la flota de bases de datos para solucionar problemas y optimizar el rendimiento. Optimiza tu SQL con control del SQL en tiempo real y simplifica las configuraciones de tus bases de datos.
+    Oracle ofrece lo mejor de Oracle Enterprise Manager como servicio en la nube. Los administradores de bases de datos ya no tienen que mantener el sistema, lo que les deja tiempo libre para concentrarse en sus habilidades de alto valor. Además, innovaciones clave como la automatización de flotas de bases de datos simplifican y aceleran la gestión de flotas de bases de datos desplegadas tanto en entornos locales como en Oracle Cloud Infrastructure (OCI).`;
+  });
+
+  //SO
+  imgSO.addEventListener("click", (event) => {
+    tittle.textContent = `Máquinas virtuales (VM)`;
+    contenido.textContent = `Las VM de Oracle Cloud Infrastructure (OCI) Compute proporcionan capacidad informática segura y flexible en la nube para cargas de trabajo que van desde pequeños proyectos de desarrollo hasta aplicaciones globales a gran escala, como las plataformas de comunicación en tiempo real. Las unidades flexibles permiten a los usuarios optimizar los recursos de máquina virtual con valores de procesador y memoria personalizados para mejorar el rendimiento de precios.`;
+  });
+
+  //FW
+  imgFW.addEventListener("click", (event) => {
+    tittle.textContent = `Network Firewall`;
+    contenido.textContent = `Apply granular security controls to inbound, outbound, and lateral traffic to application and network workloads on Oracle Cloud Infrastructure (OCI) with flexible policy enforcement. Oracle Cloud Infrastructure Network Firewall is an integrated, cloud native managed firewall service built using next-generation firewall technology from Palo Alto Networks. It helps customers begin to defend against emerging threats and immediately take advantage of the integrated firewall without configuring and managing additional security infrastructure.`;
+  });
+
+  //SV
+  imgSV.addEventListener("click", (event) => {
+    tittle.textContent = `Server`;
+    contenido.textContent = `Oracle Cloud Infrastructure (OCI) Compute bare metal instances provide customers with isolation and control with dedicated access to the physical server. Bare metal instances support core-intensive, memory-intensive, and high-bandwidth applications, scaling up to 192 cores (the largest in the industry), 2.3TB of RAM, and up to 1PB of storage. In block. Customers can create cloud environments on Oracle bare metal instances with significant performance improvements compared to other public clouds and on-premises data centers.`;
+  });
+
+  //SP
+  imgSP.addEventListener("click", (event) => {
+    tittle.textContent = `Support`;
+    contenido.textContent = `As you migrate from on-premises infrastructure and packaged applications software to Oracle Cloud Infrastructure (OCI), support becomes a shared responsibility among you, OCI support, and OCI technology licensed support. In cases where traditional Oracle software technologies are deployed in non-OCI infrastructures, Oracle isn't responsible for infrastructure as a service (IaaS) support and administration of the Oracle software.
+According to the OCI Cloud Operating Model (COM), the cloud operations team is responsible for the following activities:
+-Ongoing maintenance of IaaS and platform as a service (PaaS) in OCI
+-Onboarding new business units (BUs) and workloads to OCI
+-Incident management
+-IaaS and PaaS monitoring with OCI-native services
+-Integration with third-party observability, IT service management (ITSM), and collaboration tools
+-Managing OCI services that are approaching End-of-Support-Life (EOSL)`;
+  });
+
+  //LN
+  imgLN.addEventListener("click", (event) => {
+    tittle.textContent = `Machine Learning`;
+    contenido.textContent = `Building a machine learning (ML) model is an iterative process. Many of the necessary steps are repeated and modified until data scientists are satisfied with the model's performance. This process requires much data exploration, visualization, and experimentation.
+The OCI Data Science service supports a data scientist throughout the full ML life cycle. It rapidly builds, trains, deploys, and manages ML models. Data Science users work in a familiar JupyterLab notebook interface where they write Python code and have access to the open source libraries.`;
+  });
+
+  //SC
+  imgSC.addEventListener("click", (event) => {
+    tittle.textContent = `Security`;
+    contenido.textContent = `Users have the option to enable confidential computing on certain bare metal instances in certain regions. Once enabled, these bare metal instances use AMD Secure Memory Encryption technology to encrypt the data being processed, preventing unauthorized access or modification.
+Protect customers from attacks with isolated network virtualization. Design is a critical element of the security-first architecture of Oracle Cloud Infrastructure; Stops the spread of malware in its tracks with a custom-designed SmartNIC to isolate and virtualize the network.
+Reduce the risk of firmware-based attacks against Oracle Cloud Infrastructure clients with custom hardware-based root of trust technology designed to wipe and reinstall firmware each time a new server is provisioned or a new client is established.`;
+  });
+  
+  //BIGD
+  imgBIGD.addEventListener("click", (event) => {
+    tittle.textContent = "BigData";
+    contenido.textContent = `Get speed and performance, as well as all the productivity benefits that come with local non-volatile memory express (NVMe) storage.
+Leverage RDMA cluster networks for the most demanding workloads.
+GPU instances with dedicated hardware deliver high performance for demanding applications running sophisticated algorithms, such as machine learning and data telemetry analysis.
+Run compute-intensive, high-throughput computing workloads that require CPUs to deliver high performance and low latencies.
+Processors from industry leaders deliver optimal performance, depending on the needs of your workloads.
+-160 Ampere Altra 3.0 GHz processor cores in a two-socket server
+-Up to 192 cores in AMD EPYC processors
+-Up to 2304 GB RAM
+-Up to 1PB of block storage
+2 x 50 Gb/s or 1 x 100 Gb/s network interfaces for standard and Dense I/O instances`;
+  });
+
+  //AWS
+  imgAWS.addEventListener("click", (event) => {
+    tittle.textContent = `AWS`;
+    contenido.textContent = `Oracle Cloud Infrastructure is built for enterprises seeking higher performance, lower costs, and easier cloud migration for their applications. Customers choose Oracle Cloud Infrastructure over AWS for several reasons: First, they can consume cloud services in the public cloud or within their own data center with Oracle Dedicated Region Cloud@Customer. Second, they can migrate and run any workload as is on Oracle Cloud, including Oracle databases and applications, VMware, or bare metal servers. Third, customers can easily implement security controls and automation to prevent misconfiguration errors and implement security best practices. Fourth, they have lower risks with Oracle’s end-to-end SLAs covering performance, availability, and manageability of services. Finally, their workloads achieve better performance at a significantly lower cost with Oracle Cloud Infrastructure than AWS. Take a look at what makes Oracle Cloud Infrastructure a better cloud platform than AWS.`;
+  });
+
+  //IC
+  imgIC.addEventListener("click", (event) => {
+    tittle.textContent = `Apps`;
+    contenido.textContent = `Our complete cloud suite of SaaS applications brings consistent processes and a single source of truth across the most important business functions—from enterprise resource planning, supply chain management, and human capital management to advertising and customer experience. The applications help you improve your customer engagements, increase your business’s agility, and react to change faster than ever before.`;
+  });
+
+  //MAN
+  imgMAN.addEventListener("click", (event) => {
+    tittle.textContent = `Administrator`;
+    contenido.textContent = `In your organization, you might want administrators to have different levels of access to various tasks and resources. For example, the identity domain administrator has superuser privileges for an identity domain. This administrator may want to delegate some of their responsibilities to other users to carry out the tasks associated with these responsibilities, such as managing system configuration and security settings, applications, users, groups, group memberships, and so on. To do this, the administrator assigns these users to other administrator roles. Users who are assigned to these roles will be able to perform specific tasks that are associated with the roles.`;
+  });
+
+  //PAGE
+  imgPAGE.addEventListener("click", (event) => {
+    tittle.textContent = `Web Page`;
+    contenido.textContent = `The OCI Object Storage dedicated endpoints feature provides new endpoints for the OCI customers to securely access the storage buckets.
+The tenant isolation will have unique, immutable, system-generated, and namespace-prefixed dedicated endpoints. Using these tenancy-specific endpoints by having a dedicated namespace string in the URLs will ensure full isolation to help meet your organization's security and compliance requirements.
+The current Object Storage service API endpoint URLs will continue to function. Use of the new endpoints is optional for tenants writing their own clients to access Object Storage buckets. You can point your custom client requests to any of these new domains for better security posture. We do not mandate you to use a specific domain. However, we encourage you to use dedicated endpoints with namespace prefix on the customer-oci.com domain.`;
+  });
+
+  //PROCESS
+  imgPR.addEventListener("click", (event) => {
+    tittle.textContent = `Process`;
+    contenido.textContent = `Process Automation enables you to automate your enterprise business processes and workflows. The core capabilities include the ability for you build structured and dynamic processes, creating reusable business rules with decisions, end user experiences with different flavors of web forms and Linked Uis and lastly connecting to various systems of record via REST based connectivity.`;
+  });
+
+  //TECH
+  imgTECH.addEventListener("click", (event) => {
+    tittle.textContent = `Kubernetes`;
+    contenido.textContent = `Oracle Cloud Infrastructure Container Engine for Kubernetes (OKE) is a managed Kubernetes service that simplifies the operations of enterprise-grade Kubernetes at scale. It reduces the time, cost, and effort needed to manage the complexities of the Kubernetes infrastructure. Container Engine for Kubernetes lets you deploy Kubernetes clusters and ensure reliable operations for both the control plane and the worker nodes with automatic scaling, upgrades, and security patching. Additionally, OKE provides a fully serverless Kubernetes experience with virtual nodes. Virtual nodes provide a serverless Kubernetes experience to run containerized applications at scale without spending additional resources on managing, scaling, upgrading, and troubleshooting the infrastructure of your clusters.
+Virtual nodes provide the abstraction of regular nodes to Kubernetes, delivering granular pod elasticity with per-pod pricing. You can scale your deployments without taking into consideration the cluster's capacity, simplifying the execution of scalable workloads, such as high-traffic web applications and data-processing jobs.`;
+  });
+
+  //SSO
+  imgSSO.addEventListener("click", (event) => {
+    tittle.textContent = `Single Sign On`;
+    contenido.textContent = `he OCI IAM SAML Identity Provider configuration wizard simplifies the administrator experience by providing an easy-to-use, wizard-based interface with built-in validation testing. It also supports SAML Just-in-Time (JIT) provisioning and group mapping. This approach makes life easier for administrators and reduces the time it takes to onboard new identity providers.
+OCI Administrators can access the wizard by navigating to the identity domains Identity Providers menu option. Click Add IdP and select the option to Add SAML IdP. This opens the SAML identity provider configuration wizard.
+The wizard reduces the number of steps required to configure a SAML IdP. It also minimizes the need to swap back and forth between multiple screens. In a single workflow, administrators can download and execute the required details and metadata for both the IdP and the SP, which in this case, is an OCI IAM identity domain. As it's critical to test the configuration before activating the IdP, the wizard also provides inline validation. When the IdP is configured, the wizard then guides administrators on how to add the IdP to the target identity domain's IdP policy.
+This improved interface offers the option of automated imports or manual configuration of identity provider details. This improves flexibility for administrators to leverage whichever approach they prefer.`;
+  });
+
+  //WAR
+  imgWAR.addEventListener("click", (event) => {
+    tittle.textContent = `Warnings`;
+    contenido.textContent = `OCI provides native services that allow you to perform logging, alerts, and a Service Connector Hub for passing log events on to non-OCI tools, such as third-party SIEM solutions. This option includes passing the log data out to another platform, including on-premises solutions supporting hybrid and multicloud situations.
+If you port or develop applications to OCI, you ideally want to use the OCI native features to make things cheaper and easier. For ported solutions, that means configuring the collector agent if your application can’t log directly to OCI logging or through host OS solutions like Syslog. With everything configured, how do we prove all the configuration is ideal and working correctly? Running the application is the obvious answer, but it can take a lot of effort to create the right stimuli. Creating the failure events where the log event processing can really deliver value can be challenging.`;
+  });
+
+</script>

@@ -1,0 +1,473 @@
+<style>
+  /* Contenedor para las imágenes */
+.container {
+  position: relative;
+  display: inline-block;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.prueba{
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.results {
+  position: relative;
+  display: inline-block;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.results-font {
+  background: #67b0d1;
+}
+/* Estilo para la imagen de fondo */
+.background-image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Estilo para la imagen superior */
+.overlay-image {
+  position: absolute;
+  display: block;
+  width: 70%;
+  height: 62%;
+  top: 5%;
+  left: 15%;
+  right: 15%;
+  
+}
+.elements-image{
+  position: absolute;
+  display: block;
+
+}
+.elements-image:hover{
+  transform: scale(1.2);
+  transition: transform .3s;
+}
+.elements-image {overflow:hidden;}
+.red{
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+</style>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Inner Page - Squadfree Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Squadfree
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-between position-relative">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="index.html"><span>Squadfree</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About Us</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li class="dropdown megamenu"><a href="#"><span>Mega Menu</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li>
+                <strong>Column 1</strong>
+                <a href="#">Column 1 link 1</a>
+                <a href="#">Column 1 link 2</a>
+                <a href="#">Column 1 link 3</a>
+              </li>
+              <li>
+                <strong>Column 2</strong>
+                <a href="#">Column 2 link 1</a>
+                <a href="#">Column 2 link 2</a>
+                <a href="#">Column 3 link 3</a>
+              </li>
+              <li>
+                <strong>Column 3</strong>
+                <a href="#">Column 3 link 1</a>
+                <a href="#">Column 3 link 2</a>
+                <a href="#">Column 3 link 3</a>
+              </li>
+              <li>
+                <strong>Column 4</strong>
+                <a href="#">Column 4 link 1</a>
+                <a href="#">Column 4 link 2</a>
+                <a href="#">Column 4 link 3</a>
+              </li>
+              <li>
+                <strong>Column 5</strong>
+                <a href="#">Column 5 link 1</a>
+                <a href="#">Column 5 link 2</a>
+                <a href="#">Column 5 link 3</a>
+              </li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Inner Page</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Inner Page</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <section class="inner-page">
+      <div class="container">
+        <img src="assets/img/compute2.png" width="1500" height="1200" class="background-image">
+        <img src="assets/img/extend.png" class="overlay-image" position-relative="absolute">
+        <img id="bd" src="assets/img/db.png" style="width: 4%; height: 7%; top: 39%; left: 47.5%;" class="elements-image">  
+        <img id="so" src="assets/img/so.png" style="width: 6%; height: 10%; top: 33%; left: 63%;" class="elements-image">
+        <img id="fw" src="assets/img/fw.png" style="width: 5%; height: 8%; top: 21%; left: 31%;" class="elements-image">
+        <img id="sv" src="assets/img/server.png" style="width: 5%; height: 8%; top: 47%; left: 31.5%;" class="elements-image">
+        <img id="sp" src="assets/img/support.png" style="width: 5%; height: 6%; top: 13%; left: 51.5%;" class="elements-image">
+        <img id="ln" src="assets/img/learning.png" style="width: 4%; height: 5%; top: 14%; left: 70%;" class="elements-image">
+        <img id="sc" src="assets/img/security.png" style="width: 8%; height: 7%; top: 36%; left: 14%;" class="elements-image">
+        <img id="bigd" src="assets/img/bigdata.png" style="width: 7%; height: 7%; top: 6%; left: 38%;" class="elements-image">
+        <img id="aws" src="assets/img/aws.png" style="width: 5%; height: 5%; top: 13%; left: 78%;" class="elements-image">
+        <img id="ic" src="assets/img/ic.png" style="width: 6%; height: 6%; top: 23%; left: 41%;" class="elements-image">
+        <img id="man" src="assets/img/manager.png" style="width: 7%; height: 7%; top: 12%; left: 17%;" class="elements-image">
+        <img id="page" src="assets/img/page.png" style="width: 5%; height: 5%; top: 55%; left: 67%;" class="elements-image">
+        <img id="pr" src="assets/img/process.png" style="width: 5%; height: 4%; top: 58.5%; left: 50.5%;" class="elements-image">
+        <img id="tech" src="assets/img/technology.png" style="width: 3.5%; height: 5%; top: 41%; left: 23.5%;" class="elements-image">
+        <img id="sso" src="assets/img/sso.png" style="width: 3.5%; height: 5%; top: 61%; left: 25%;" class="elements-image">
+        <img id="war" src="assets/img/warning.png" style="width: 4%; height: 5%; top: 39.5%; left: 74%;" class="elements-image">
+      </div>               
+    </section>
+    <section id="services" class="services">
+      <div class="container">
+      <div style="width: 100%;">
+        <div class="icon-box" data-aos="fade-up">
+          <div class="icon"><i class="bx bx-file"></i></div>
+          <h4 id="titulo" class="title"><a href="">Visualizacion de elementos</a></h4>
+          <p id="contenido" class="description">Usted podra visualizar todo el contenido presentado referente a los elementos que califican para su negocio</p>
+        </div>
+      </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>Squadfree</h3>
+              <p name="tittle" class="pb-3"><em>Qui repudiandae et eum dolores alias sed ea. Qui suscipit veniam excepturi quod.</em></p>
+              <p name="content">
+                A108 Adam Street <br>
+                NY 535022, USA<br><br>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Squadfree</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
+
+
+<script>
+  const tittle = document.querySelector("#titulo");
+  const contenido = document.querySelector("#contenido");
+  const imgBD = document.querySelector("#bd");
+  const imgSO = document.querySelector("#so");
+  const imgFW = document.querySelector("#fw");
+  const imgSV = document.querySelector("#sv");
+  const imgSP = document.querySelector("#sp");
+  const imgLN = document.querySelector("#ln");
+  const imgSC = document.querySelector("#sc");
+  const imgBIGD = document.querySelector("#bigd");
+  const imgAWS = document.querySelector("#aws");
+  const imgIC = document.querySelector("#ic");
+  const imgMAN = document.querySelector("#man");
+  const imgPAGE = document.querySelector("#page");
+  const imgPR = document.querySelector("#pr");
+  const imgTECH = document.querySelector("#tech");
+  const imgSSO = document.querySelector("#sso");
+  const imgWAR = document.querySelector("#war");
+
+
+
+  //BD
+  imgBD.addEventListener("click", (event) => {
+    tittle.textContent = `OCI Database Management`;
+    contenido.textContent = `Con Database Management Cloud Service, los administradores de bases de datos disponen de una consola unificada para las bases de datos on-premises y en la nube con prestaciones de gestión de bases de datos para todo el ciclo de vida que abarcan la supervisión, la gestión del rendimiento, el ajuste y la administración. Utilice diagnósticos y ajustes avanzados de la flota de bases de datos para solucionar problemas y optimizar el rendimiento. Optimiza tu SQL con control del SQL en tiempo real y simplifica las configuraciones de tus bases de datos.
+    Oracle ofrece lo mejor de Oracle Enterprise Manager como servicio en la nube. Los administradores de bases de datos ya no tienen que mantener el sistema, lo que les deja tiempo libre para concentrarse en sus habilidades de alto valor. Además, innovaciones clave como la automatización de flotas de bases de datos simplifican y aceleran la gestión de flotas de bases de datos desplegadas tanto en entornos locales como en Oracle Cloud Infrastructure (OCI).`;
+  });
+
+  //SO
+  imgSO.addEventListener("click", (event) => {
+    tittle.textContent = `Máquinas virtuales (VM)`;
+    contenido.textContent = `Las VM de Oracle Cloud Infrastructure (OCI) Compute proporcionan capacidad informática segura y flexible en la nube para cargas de trabajo que van desde pequeños proyectos de desarrollo hasta aplicaciones globales a gran escala, como las plataformas de comunicación en tiempo real. Las unidades flexibles permiten a los usuarios optimizar los recursos de máquina virtual con valores de procesador y memoria personalizados para mejorar el rendimiento de precios.`;
+  });
+
+  //FW
+  imgFW.addEventListener("click", (event) => {
+    tittle.textContent = `Network Firewall`;
+    contenido.textContent = `Apply granular security controls to inbound, outbound, and lateral traffic to application and network workloads on Oracle Cloud Infrastructure (OCI) with flexible policy enforcement. Oracle Cloud Infrastructure Network Firewall is an integrated, cloud native managed firewall service built using next-generation firewall technology from Palo Alto Networks. It helps customers begin to defend against emerging threats and immediately take advantage of the integrated firewall without configuring and managing additional security infrastructure.`;
+  });
+
+  //SV
+  imgSV.addEventListener("click", (event) => {
+    tittle.textContent = `Server`;
+    contenido.textContent = `Apply granular security controls to inbound, outbound, and lateral traffic to application and network workloads on Oracle Cloud Infrastructure (OCI) with flexible policy enforcement. Oracle Cloud Infrastructure Network Firewall is an integrated, cloud native managed firewall service built using next-generation firewall technology from Palo Alto Networks. It helps customers begin to defend against emerging threats and immediately take advantage of the integrated firewall without configuring and managing additional security infrastructure.`;
+  });
+
+  //SP
+  imgSP.addEventListener("click", (event) => {
+    tittle.textContent = `Support`;
+    contenido.textContent = `Apply granular security controls to inbound, outbound, and lateral traffic to application and network workloads on Oracle Cloud Infrastructure (OCI) with flexible policy enforcement. Oracle Cloud Infrastructure Network Firewall is an integrated, cloud native managed firewall service built using next-generation firewall technology from Palo Alto Networks. It helps customers begin to defend against emerging threats and immediately take advantage of the integrated firewall without configuring and managing additional security infrastructure.`;
+  });
+
+  //LN
+  imgLN.addEventListener("click", (event) => {
+    tittle.textContent = `Learning`;
+    contenido.textContent = `Apply granular security controls to inbound, outbound, and lateral traffic to application and network workloads on Oracle Cloud Infrastructure (OCI) with flexible policy enforcement. Oracle Cloud Infrastructure Network Firewall is an integrated, cloud native managed firewall service built using next-generation firewall technology from Palo Alto Networks. It helps customers begin to defend against emerging threats and immediately take advantage of the integrated firewall without configuring and managing additional security infrastructure.`;
+  });
+
+  //SC
+  imgSC.addEventListener("click", (event) => {
+    tittle.textContent = `Security`;
+    contenido.textContent = `Apply granular security controls to inbound, outbound, and lateral traffic to application and network workloads on Oracle Cloud Infrastructure (OCI) with flexible policy enforcement. Oracle Cloud Infrastructure Network Firewall is an integrated, cloud native managed firewall service built using next-generation firewall technology from Palo Alto Networks. It helps customers begin to defend against emerging threats and immediately take advantage of the integrated firewall without configuring and managing additional security infrastructure.`;
+  });
+  
+  //BIGD
+  imgBIGD.addEventListener("click", (event) => {
+    tittle.textContent = `BigData`;
+    contenido.textContent = `Apply granular security controls to inbound, outbound, and lateral traffic to application and network workloads on Oracle Cloud Infrastructure (OCI) with flexible policy enforcement. Oracle Cloud Infrastructure Network Firewall is an integrated, cloud native managed firewall service built using next-generation firewall technology from Palo Alto Networks. It helps customers begin to defend against emerging threats and immediately take advantage of the integrated firewall without configuring and managing additional security infrastructure.`;
+  });
+
+  //AWS
+  imgAWS.addEventListener("click", (event) => {
+    tittle.textContent = `AWS`;
+    contenido.textContent = `Apply granular security controls to inbound, outbound, and lateral traffic to application and network workloads on Oracle Cloud Infrastructure (OCI) with flexible policy enforcement. Oracle Cloud Infrastructure Network Firewall is an integrated, cloud native managed firewall service built using next-generation firewall technology from Palo Alto Networks. It helps customers begin to defend against emerging threats and immediately take advantage of the integrated firewall without configuring and managing additional security infrastructure.`;
+  });
+
+  //IC
+  imgIC.addEventListener("click", (event) => {
+    tittle.textContent = `Apps`;
+    contenido.textContent = `Apply granular security controls to inbound, outbound, and lateral traffic to application and network workloads on Oracle Cloud Infrastructure (OCI) with flexible policy enforcement. Oracle Cloud Infrastructure Network Firewall is an integrated, cloud native managed firewall service built using next-generation firewall technology from Palo Alto Networks. It helps customers begin to defend against emerging threats and immediately take advantage of the integrated firewall without configuring and managing additional security infrastructure.`;
+  });
+
+  //MAN
+  imgMAN.addEventListener("click", (event) => {
+    tittle.textContent = `Administrator`;
+    contenido.textContent = `Apply granular security controls to inbound, outbound, and lateral traffic to application and network workloads on Oracle Cloud Infrastructure (OCI) with flexible policy enforcement. Oracle Cloud Infrastructure Network Firewall is an integrated, cloud native managed firewall service built using next-generation firewall technology from Palo Alto Networks. It helps customers begin to defend against emerging threats and immediately take advantage of the integrated firewall without configuring and managing additional security infrastructure.`;
+  });
+
+  //PAGE
+  imgPAGE.addEventListener("click", (event) => {
+    tittle.textContent = `Web Page`;
+    contenido.textContent = `Apply granular security controls to inbound, outbound, and lateral traffic to application and network workloads on Oracle Cloud Infrastructure (OCI) with flexible policy enforcement. Oracle Cloud Infrastructure Network Firewall is an integrated, cloud native managed firewall service built using next-generation firewall technology from Palo Alto Networks. It helps customers begin to defend against emerging threats and immediately take advantage of the integrated firewall without configuring and managing additional security infrastructure.`;
+  });
+
+  //PROCESS
+  imgPR.addEventListener("click", (event) => {
+    tittle.textContent = `Process`;
+    contenido.textContent = `Apply granular security controls to inbound, outbound, and lateral traffic to application and network workloads on Oracle Cloud Infrastructure (OCI) with flexible policy enforcement. Oracle Cloud Infrastructure Network Firewall is an integrated, cloud native managed firewall service built using next-generation firewall technology from Palo Alto Networks. It helps customers begin to defend against emerging threats and immediately take advantage of the integrated firewall without configuring and managing additional security infrastructure.`;
+  });
+
+  //TECH
+  imgTECH.addEventListener("click", (event) => {
+    tittle.textContent = `Cubernets`;
+    contenido.textContent = `Apply granular security controls to inbound, outbound, and lateral traffic to application and network workloads on Oracle Cloud Infrastructure (OCI) with flexible policy enforcement. Oracle Cloud Infrastructure Network Firewall is an integrated, cloud native managed firewall service built using next-generation firewall technology from Palo Alto Networks. It helps customers begin to defend against emerging threats and immediately take advantage of the integrated firewall without configuring and managing additional security infrastructure.`;
+  });
+
+  //SSO
+  imgSSO.addEventListener("click", (event) => {
+    tittle.textContent = `Single Sing On`;
+    contenido.textContent = `Apply granular security controls to inbound, outbound, and lateral traffic to application and network workloads on Oracle Cloud Infrastructure (OCI) with flexible policy enforcement. Oracle Cloud Infrastructure Network Firewall is an integrated, cloud native managed firewall service built using next-generation firewall technology from Palo Alto Networks. It helps customers begin to defend against emerging threats and immediately take advantage of the integrated firewall without configuring and managing additional security infrastructure.`;
+  });
+
+  //WAR
+  imgWAR.addEventListener("click", (event) => {
+    tittle.textContent = `Warnings`;
+    contenido.textContent = `Apply granular security controls to inbound, outbound, and lateral traffic to application and network workloads on Oracle Cloud Infrastructure (OCI) with flexible policy enforcement. Oracle Cloud Infrastructure Network Firewall is an integrated, cloud native managed firewall service built using next-generation firewall technology from Palo Alto Networks. It helps customers begin to defend against emerging threats and immediately take advantage of the integrated firewall without configuring and managing additional security infrastructure.`;
+  });
+
+</script>
+
+<script>
+ const form = document.querySelector("Formulario");
+  
+  //tittle.textContent = $(form).val();
+  //var miformulario = form[0];
+  tittle.textContent = form[0];
+
+
+</script>
+
